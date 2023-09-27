@@ -1,0 +1,35 @@
+---
+
+interface Props {
+    title: string
+    content : string
+
+}
+const {title ="aqui va un titulo", content = "aqui va el contenido"} = Astro.props
+---
+
+
+<style>
+    
+    .card {
+  background: #8ed1136c;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 35px 75px 0 rgba(0, 0, 0, 0.2);
+}
+</style>
+
+
+<div class="card">
+    <h1>{title}</h1>
+    <p>{content}</p>
+    
+</div>

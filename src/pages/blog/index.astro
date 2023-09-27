@@ -1,0 +1,37 @@
+---
+import Layout from "../components/layout.astro";
+import Post from "../post.astro";
+const posts = await Astro.glob('./post/*.md')
+console.log()
+---
+
+
+<Layout pageTitle="Blog del Curso Astro">
+
+    <h1>Blog</h1>
+    <p>Bienbenidos al Blog</p>
+    <hr>
+    <img width="250" src="https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228_640.jpg" alt="imagen">
+    <br>
+    {
+        posts.map(post => {
+            return <a href = {post.url} class="link">  {post.frontmatter.title} </a><br><br>
+    
+        })
+    
+}
+
+<style>
+
+    .link{
+        background: wheat;
+        color:black;
+        text-decoration:none;
+        display:flex;
+        margin-botton: 24px;
+    }
+    
+    </style>
+
+</Layout>
+	

@@ -1,0 +1,27 @@
+---
+import Layout from "./components/layout.astro";
+const nombre = "pagina about"
+const lista = ["my old man","my treasure", "my cat"]
+---
+
+
+    <Layout pageTitle="este  es el index">	
+	</style>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8" />
+			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<meta name="viewport" content="width=device-width" />
+			<meta name="generator" content={Astro.generator} />
+			<title>adso Astro</title>
+		</head>
+	<h1 class="title">{"myFamily"}</h1>
+	<ul>
+		<body>
+	{lista.map(myFamily=> <li>{myFamily}</li><button>🥰</button>)}
+	</ul>
+	</body>
+	
+	</Layout>
+
+    

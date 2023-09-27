@@ -1,0 +1,32 @@
+---
+ interface Props {
+    pageTitle?: string
+    
+}
+
+const {pageTitle} = Astro.props
+---
+
+<style>
+
+    body{
+        background: url("https://png.pngtree.com/background/20230522/original/pngtree-an-animated-family-smiling-picture-image_2696426.jpg");
+        color: black;
+        
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Astro - { pageTitle }</title>
+</head>
+<body>
+    
+    <slot/>
+
+
+</body>
+</html>
