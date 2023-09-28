@@ -1,16 +1,16 @@
 ---
 import Layout from "./components/layout.astro";
+import  Button from "./components/ButtonSuscribe"
+import { ToastContainer } from 'react-toastify';
 ---
-<Layout pageTitle="este  es el index">
+<Layout pageTitle="Esto el el home principal">
 
-	<!--  -->
-    <h1>Esto el el home principal</h1>
-    <p>Bienbenidos al Blog</p>
-    <hr>
-    <br>
-    <a href="/blog/post/notas">Notas</a>
-    <br>
-    <a href="/blog/post/primera_publi">Primera Publicacion</a>
+    <h1>Curso Astro</h1>
+    <p>Bienvenidos al Curso</p>
+    
+    <Button client:load/>
+    <ToastContainer client:load/>
 
 </Layout>
+	
 	
